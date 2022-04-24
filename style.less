@@ -1,4 +1,52 @@
 @base-blue: #70baff;
+@nav-blue: lighten(@base-blue, 5%);
 body{
     background-color: @base-blue;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "nav    nav     nav     nav "
+    "main   main    main    main"
+    "footer footer footer foooter";
+}
+header{
+    grid-area: header;
+    text-align: center;
+}
+nav{
+    grid-area: nav;
+    ul{
+        float: right;
+        li{
+            display: inline-block;
+            padding: 0.5em;
+            &:hover{
+                color: white;
+                text-decoration: line-through;
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                display: none;
+                position:absolute;
+                right: -50%;
+                z-index: 1;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+                background-color: @nav-blue;
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+#main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
 }
