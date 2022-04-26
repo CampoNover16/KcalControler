@@ -1,10 +1,14 @@
 @base-blue: #4d96fb;
 @nav-blue: #53aff4;
 @next-blue: #70baff;
+@other-blue: #98ceff;
 body{
     padding: 0;
     margin: 0;
     background-color: @base-blue;
+    font-family: open-sans, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 .container{
     display: grid;
@@ -12,6 +16,9 @@ body{
     "e_nav    nav       e_nav"
     "e_main   main     e_main"
     "e_footer footer e_footer";
+}
+.active{
+    background-color: @other-blue;
 }
 .flex_nav{
     display: flex;
@@ -31,10 +38,12 @@ nav{
     ul{
         float: right;
         padding-right: 0.5em;
+        
         li{
-            display: inline-flex;
+            display: inline-block;
             padding: 1em;
             font-size: 18px;
+            
             &:hover{
                 color: white;
                 text-decoration: none;
@@ -58,6 +67,7 @@ nav{
             a{
                 text-decoration: none;
                 padding-right: 0.5em;
+                text-align: center;  
             }
             a:link, a:visited{
                 color:black;
@@ -65,7 +75,6 @@ nav{
         }
     }
 }
-
 .flex_main{
     display: flex;
     justify-content: space-between;
@@ -87,6 +96,7 @@ footer{
     grid-area: footer;
     width: 50%;
     padding: 0.5em;
+    background-color: @nav-blue;
 }
 footer > span{
     padding-left: 5px;
@@ -94,4 +104,20 @@ footer > span{
 .e_footer{
     grid-area: e_footer;
     width: 25%;
+}
+.form_place{
+    margin: 0 auto;
+    width: 45%;
+    background-color: @nav-blue;
+}
+.p_box{
+    margin: 0 auto;
+    width: 75%;
+    background-color: @nav-blue;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top:0.5em;
+}
+div > div > div > h1{
+    text-align: center;
 }
