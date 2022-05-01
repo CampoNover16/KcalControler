@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/dqr6vcs.css">
+    <title>KcalControler - Contact</title>
+</head>
+<body>
+    <div class="flex_nav">
+        <div class="e_nav"></div>
+        <nav>
+            <img src="images/healthy.png" alt="healthy-logo" height="64px" width="64px">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calorie_calc.html">Calculator</a></li>
+                <li>
+                    <div class="dropdown">
+                        <img src="images/down-arrow.png" alt="dropdown-button" height="16px" width="16px"> 
+                        <div class="dropdown-content">
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="#">Articles</a></li>
+                                <li><a href="#">Diets</a></li>
+                                <li><a href="#">Price list</a></li>
+                                <li class="active"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="e_nav"></div>
+    </div>
+    <div class="flex_main">
+        <div class="e_main"></div>
+        <div class="main">
+            <div class="p_box">
+                <h1 class="centered_text">Contact us</h1>
+                <p>
+                    <form>
+                        <p>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name">
+                            <label for="surname">Surname:</label>
+                            <input type="text" id="surname" name="surname">
+                        </p>
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                        </p>
+                        <p>
+                            <p><label for="text_mess">Message:</label></p>
+                            <textarea name="text_mess" id="text_mess" name="text_mess" cols="70" rows="10"></textarea>
+                        </p>
+                        <p>
+                            <button type="submit" class="form_button" value="Submit">Submit</button>
+                        </p>
+                    </form>
+                </p>
+            </div>
+            <div class="p_box">
+                <h2 class="centered_text">Or find us on:</h2>
+                <div class="find_container">
+                    <div class="find_item centered_text">
+                        <a href="https://www.facebook.com"><img src="images/facebook.png" alt="facebook_logo" height="64px" width="64px"></a>
+                    </div>
+                    <div class="find_item centered_text">
+                        <a href="https://www.instagram.com"><img src="images/instagram.png" alt="instagram_logo" height="64px" width="64px"></a>
+                    </div>
+                    <div class="find_item centered_text">
+                        <a href="https://twitter.com"><img src="images/twitter.png" alt="twitter_logo" height="64px" width="64px"></a>
+                    </div>
+                    <div class="find_item centered_text">
+                        <a href="https://www.youtube.com"><img src="images/youtube.png" alt="youtube_logo" height="64px" width="64px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="e_main"></div>
+    </div>
+    <div class="flex_footer">
+        <div class="e_footer"></div>
+        <footer><img src="images/copyright-symbol.png" alt="copyleft-symbol" height="16px" width="16px"><span>CampoNover16</span></footer>
+        <div class="e_footer"></div>
+    </div>
+</body>
+</html>
