@@ -2,6 +2,9 @@
 @nav-blue: #53aff4;
 @next-blue: #70baff;
 @other-blue: #98ceff;
+@padding: 0.5em; 
+
+/* main styles*/
 body{
     padding: 0;
     margin: 0;
@@ -13,37 +16,38 @@ body{
 .container{
     display: grid;
     grid-template-areas: 
-    "e_nav    nav       e_nav"
-    "e_main   main     e_main"
-    "e_footer footer e_footer";
+    "empty_nav      nav     empty_nav"
+    "empty_main     main    empty_main"
+    "empty_footer   footer  empty_footer";
 }
 .active{
     background-color: @other-blue;
+}
+.centered_text{
+    text-align: center;
 }
 .flex_nav{
     display: flex;
     justify-content: space-between;
 }
-.e_nav{
-    grid-area: e_nav;
+.empty_nav{
+    grid-area: empty_nav;
     width: 25%;
-}
-nav > img{
-    padding: 0.6em;
 }
 nav{
     grid-area: nav;
     background-color: @nav-blue;
     width: 50%;
+    & > img{
+        padding: @padding * 2 - 0.3em;
+    }
     ul{
         float: right;
-        padding-right: 0.5em;
-        
+        padding-right: @padding;
         li{
             display: inline-block;
-            padding: 1em;
+            padding: @padding*2;
             font-size: 18px;
-            
             &:hover{
                 color: white;
                 text-decoration: none;
@@ -52,26 +56,26 @@ nav{
             .dropdown{
                 position: relative;
                 display: inline-block;
-            }
-            .dropdown-content{
-                display: none;
-                position:absolute;
-                right: -50%;
-                box-shadow: 0 0 1em black;
-                z-index: 1;
-            }
-            .dropdown:hover .dropdown-content {
-                display: block;
-                background-color: @nav-blue;
+                .dropdown-content{
+                    display: none;
+                    position: absolute;
+                    right: 0%;
+                    box-shadow: 0 0 1em black;
+                    z-index: 1;
+                }
+                &:hover .dropdown-content {
+                    background-color: @nav-blue;
+                    display: block;
+                    max-width: 125px;
+                }
             }
             a{
                 text-decoration: none;
-                padding-right: 0.5em;
                 text-align: center;  
-            }
-            a:link, a:visited{
-                color:black;
-            }        
+                &:link, &:visited{
+                    color:black;
+                }  
+            }       
         }
     }
 }
@@ -82,10 +86,10 @@ nav{
 .main {
     grid-area: main;
     width: 50%;
-    padding: 0.5em;
+    padding: @padding;
 }
-.e_main{
-    grid-area: e_main;
+.empty_main{
+    grid-area: empty_main;
     width: 25%;
 }
 .flex_footer{
@@ -95,16 +99,54 @@ nav{
 footer{
     grid-area: footer;
     width: 50%;
-    padding: 0.5em;
+    padding: @padding;
     background-color: @nav-blue;
+    & > span{
+        padding-left: 5px;
+    }
 }
-footer > span{
-    padding-left: 5px;
-}
-.e_footer{
-    grid-area: e_footer;
+.empty_footer{
+    grid-area: empty_footer;
     width: 25%;
 }
+form{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+input{
+    height: 25px;
+    &, textarea{
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    &[type=email]{
+        width: 50%;
+    }
+    &[type=radio]{
+        height: auto;
+    }
+}
+.form_button{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: @next-blue;
+    padding: @padding*2 - 0.3em;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    &:hover{
+        background-color: @other-blue;
+        cursor: pointer;
+    }
+}
+hr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);  
+}
+/* end of main.html*/
+/* calorie.html */
 .form_place{
     margin: 0 auto;
     width: 45%;
@@ -114,13 +156,12 @@ footer > span{
     margin: 0 auto;
     width: 75%;
     background-color: @nav-blue;
-    padding: 0.5em;
+    padding: @padding;
     margin-bottom: 0.5em;
     margin-top:0.5em;
 }
-.centered_text{
-    text-align: center;
-}
+/* end of calorie.html*/
+/* contact.html */
 .find_container{
     display: flex;
     flex-direction: row;
@@ -129,40 +170,10 @@ footer > span{
     height: 100px;
 }
 .find_item{
-    padding: 0.5em;
+    padding: @padding;
     width: 25%;
+    &:hover{
+        background-color: @next-blue;
+    }
 }
-.find_item:hover{
-    background-color: @next-blue;
-}
-input{
-    height: 25px;
-}
-input, textarea{
-    border: 1px solid black;
-    border-radius: 5px;
-}
-form{
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-}
-input[type=email]{
-    width: 50%;
-}
-input[type=radio]{
-    height: auto;
-}
-.form_button{
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: @next-blue;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 15px;
-}
-.form_button:hover{
-    background-color: @other-blue;
-    cursor: pointer;
-}
+/* end of contact.html*/
