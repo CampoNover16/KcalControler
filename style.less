@@ -276,3 +276,29 @@ hr{
     }
 }  
 /* end of diets.html*/
+/* articles.html */
+.articles_container{
+    display: inline-block;
+    padding: @padding * 2;
+}
+.article_item{
+    display: flex;
+    align-items: center;
+    
+    padding: @padding;
+    margin-bottom: 15px;
+    height: 250px;
+    width: 98%;
+    box-shadow: 0 0 0.5em black;
+    &>a{
+        pointer-events: none;
+    }
+}  
+.left_inner_article_item{
+    width: 40%;
+    text-align: center;
+}
+.right_inner_article_item{
+    width: 68%;
+}
+/* end of articles.html*/
