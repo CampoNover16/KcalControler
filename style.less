@@ -146,7 +146,7 @@ hr{
     background-image: linear-gradient(to right, transparent, #CCC, transparent);  
 }
 /* end of main.html*/
-/* calorie.html */
+/* calorie_calc.html */
 .form_place{
     margin: 0 auto;
     width: 45%;
@@ -156,11 +156,11 @@ hr{
     margin: 0 auto;
     width: 75%;
     background-color: @nav-blue;
-    padding: @padding;
+    padding: @padding*2;
     margin-bottom: 0.5em;
     margin-top:0.5em;
 }
-/* end of calorie.html*/
+/* end of calorie_calc.html*/
 /* contact.html */
 .find_container{
     display: flex;
@@ -177,3 +177,74 @@ hr{
     }
 }
 /* end of contact.html*/
+/* price_list.html */
+#price_tab{
+    border-collapse: collapse;
+    width: 100%;
+    td, th{
+        border: 1px solid black;
+        padding: @padding;
+        text-align: center;
+    }
+    th{
+        padding-top: @padding * 2;
+        padding-bottom: @padding * 2;
+        background-color: @base-blue;
+        color: white;
+    }
+    tr{
+        &:hover{
+            background-color: @next-blue;
+        };
+    }
+}
+.button_container{
+    text-align: center;
+}
+.price_button{
+    margin: 0.5em;  
+}
+.price_step_container{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: @padding * 2;
+    flex-wrap: wrap;
+}
+.price_step_item{
+    padding: @padding;
+    height: 200px;
+    width: 20%;
+    box-shadow: 0 0 0.5em black;
+    a{
+        pointer-events: none;
+    }
+    &:hover{
+        background-color: @next-blue;
+    }
+}
+.price_step_item_two{
+    padding: @padding;
+    height: 125px;
+    width: 25%;
+    box-shadow: 0 0 0.5em black;
+    a{
+        pointer-events: none;
+    }
+    &:hover{
+        background-color: @next-blue;
+    }
+}
+.achieve_list_container{
+    ul{
+        list-style: none;
+        width: 100%;
+        li{
+            width: 30%;
+            display: inline-block;
+        }
+    }  
+}
+/* end of price_list.html*/
