@@ -31,11 +31,14 @@ body{
     "empty_main     main    empty_main"
     "empty_footer   footer  empty_footer";
 }
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
 .active{
     background-color: var(--queternary_color);
-}
-.centered_text{
-    text-align: center;
 }
 .flex_nav{
     display: flex;
@@ -50,6 +53,12 @@ body{
 }
 img{
     filter: var(--image_filter);
+}
+.colorchange_btn > img{
+    filter: brightness(0);
+}
+button{
+    color: var(--text_color);
 }
 nav{
     grid-area: nav;
@@ -176,6 +185,7 @@ hr{
     padding: 1em;
     margin-bottom: 0.5em;
     margin-top:0.5em;
+    text-align: justify;
 }
 /* end of calorie_calc.html*/
 /* contact.html */
@@ -189,6 +199,9 @@ hr{
 .find_item{
     padding: 0.5em;
     width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:hover{
         background-color: var(--tertiary_color);
     }
@@ -231,10 +244,11 @@ hr{
     flex-wrap: wrap;
 }
 .price_step_item{
-    padding: 0.5em;
+    padding: 0.6em;
     height: 200px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
+    text-align: center;
     a{
         pointer-events: none;
     }
@@ -243,10 +257,11 @@ hr{
     }
 }
 .price_step_item_two{
-    padding: 0.5em;
+    padding: 0.8em;
     height: 125px;
     width: 25%;
     box-shadow: 0 0 0.5em black;
+    text-align: center;
     a{
         pointer-events: none;
     }
@@ -271,6 +286,7 @@ hr{
     height: 160px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
+    text-align: center;
     a{
         pointer-events: none;
     }
@@ -285,6 +301,7 @@ hr{
     height: 190px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
+    text-align: center;
     &>a{
         pointer-events: none;
     }
@@ -303,7 +320,7 @@ hr{
     align-items: center;
     padding: 0.5em;
     margin-bottom: 15px;
-    height: 250px;
+    height: 275px;
     width: 98%;
     box-shadow: 0 0 0.5em black;
     &>a{
@@ -311,7 +328,7 @@ hr{
     }
 }  
 .left_inner_article_item{
-    width: 40%;
+    width: 30%;
     text-align: center;
 }
 .right_inner_article_item{
