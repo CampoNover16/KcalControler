@@ -1,17 +1,28 @@
-@base-blue: #4d96fb;
-@nav-blue: #53aff4;
-@next-blue: #70baff;
-@other-blue: #98ceff;
-@padding: 0.5em; 
-
+:root[data-theme="theme_light"]{
+    --primary_color: #4d96fb;
+    --secondary_color: #53aff4;
+    --tertiary_color: #70baff;
+    --queternary_color: #98ceff;
+    --text_color: black;
+    --image_filter: none;
+}
+:root[data-theme="theme_dark"]{
+    --primary_color: #1e1e1e;
+    --secondary_color: #252526;
+    --tertiary_color: #3e3e42;
+    --queternary_color: #007acc;
+    --text_color: white;
+    --image_filter: brightness(0) invert(1);
+}
 /* main styles*/
 body{
     padding: 0;
     margin: 0;
-    background-color: @base-blue;
+    background-color: var(--primary_color);
     font-family: open-sans, sans-serif;
     font-weight: 600;
     font-style: normal;
+    color: var(--text_color);
 }
 .container{
     display: grid;
@@ -21,7 +32,7 @@ body{
     "empty_footer   footer  empty_footer";
 }
 .active{
-    background-color: @other-blue;
+    background-color: var(--queternary_color);
 }
 .centered_text{
     text-align: center;
@@ -33,25 +44,31 @@ body{
 .empty_nav{
     grid-area: empty_nav;
     width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    filter: var(--image_filter);
 }
 nav{
     grid-area: nav;
-    background-color: @nav-blue;
+    background-color: var(--secondary_color);
     width: 50%;
     & > img{
-        padding: @padding * 2 - 0.3em;
+        padding: 1em;
     }
     ul{
         float: right;
-        padding-right: @padding;
+        padding-right: 0.5em;
         li{
             display: inline-block;
-            padding: @padding*2;
+            padding: 1em;
             font-size: 18px;
             &:hover{
                 color: white;
                 text-decoration: none;
-                background-color: @next-blue;
+                background-color: var(--tertiary_color);
             }
             .dropdown{
                 position: relative;
@@ -64,7 +81,7 @@ nav{
                     z-index: 1;
                 }
                 &:hover .dropdown-content {
-                    background-color: @nav-blue;
+                    background-color: var(--secondary_color);
                     display: block;
                     max-width: 125px;
                 }
@@ -73,7 +90,7 @@ nav{
                 text-decoration: none;
                 text-align: center;  
                 &:link, &:visited{
-                    color:black;
+                    color: var(--text_color);
                 }  
             }       
         }
@@ -86,7 +103,7 @@ nav{
 .main {
     grid-area: main;
     width: 50%;
-    padding: @padding;
+    padding: 0.5em;
 }
 .empty_main{
     grid-area: empty_main;
@@ -99,8 +116,8 @@ nav{
 footer{
     grid-area: footer;
     width: 50%;
-    padding: @padding;
-    background-color: @nav-blue;
+    padding: 0.5em;
+    background-color: var(--secondary_color);
     & > span{
         padding-left: 5px;
     }
@@ -130,13 +147,13 @@ input{
 .form_button{
     border: 1px solid black;
     border-radius: 5px;
-    background-color: @next-blue;
-    padding: @padding*2 - 0.3em;
+    background-color: var(--tertiary_color);
+    padding: 1em;
     display: inline-block;
     text-align: center;
     font-size: 15px;
     &:hover{
-        background-color: @other-blue;
+        background-color: var(--queternary_color);
         cursor: pointer;
     }
 }
@@ -150,13 +167,13 @@ hr{
 .form_place{
     margin: 0 auto;
     width: 45%;
-    background-color: @nav-blue;
+    background-color: var(--secondary_color);
 }
 .p_box{
     margin: 0 auto;
     width: 75%;
-    background-color: @nav-blue;
-    padding: @padding*2;
+    background-color: var(--secondary_color);
+    padding: 1em;
     margin-bottom: 0.5em;
     margin-top:0.5em;
 }
@@ -170,10 +187,10 @@ hr{
     height: 100px;
 }
 .find_item{
-    padding: @padding;
+    padding: 0.5em;
     width: 25%;
     &:hover{
-        background-color: @next-blue;
+        background-color: var(--tertiary_color);
     }
 }
 /* end of contact.html*/
@@ -183,18 +200,18 @@ hr{
     width: 100%;
     td, th{
         border: 1px solid black;
-        padding: @padding;
+        padding: 0.5em;
         text-align: center;
     }
     th{
-        padding-top: @padding * 2;
-        padding-bottom: @padding * 2;
-        background-color: @base-blue;
+        padding-top: 1em ;
+        padding-bottom: 1em ;
+        background-color: var(--primary_color);
         color: white;
     }
     tr{
         &:hover{
-            background-color: @next-blue;
+            background-color: var(--tertiary_color);
         };
     }
 }
@@ -210,11 +227,11 @@ hr{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: @padding * 2;
+    padding: 1em;
     flex-wrap: wrap;
 }
 .price_step_item{
-    padding: @padding;
+    padding: 0.5em;
     height: 200px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
@@ -222,11 +239,11 @@ hr{
         pointer-events: none;
     }
     &:hover{
-        background-color: @next-blue;
+        background-color: var(--tertiary_color);
     }
 }
 .price_step_item_two{
-    padding: @padding;
+    padding: 0.5em;
     height: 125px;
     width: 25%;
     box-shadow: 0 0 0.5em black;
@@ -234,7 +251,7 @@ hr{
         pointer-events: none;
     }
     &:hover{
-        background-color: @next-blue;
+        background-color: var(--tertiary_color);
     }
 }
 .achieve_list_container{
@@ -250,7 +267,7 @@ hr{
 /* end of price_list.html*/
 /* about.html */
 .about_item{
-    padding: @padding;
+    padding: 0.5em;
     height: 160px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
@@ -258,13 +275,13 @@ hr{
         pointer-events: none;
     }
     &:hover{
-        background-color: @next-blue;
+        background-color: var(--tertiary_color);
     }
 }
 /* end of about.html*/
 /* diets.html */
 .diet_item{
-    padding: @padding;
+    padding: 0.5em;
     height: 190px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
@@ -272,20 +289,19 @@ hr{
         pointer-events: none;
     }
     &:hover{
-        background-color: @next-blue;
+        background-color: var(--tertiary_color);
     }
 }  
 /* end of diets.html*/
 /* articles.html */
 .articles_container{
     display: inline-block;
-    padding: @padding * 2;
+    padding: 1em;
 }
 .article_item{
     display: flex;
     align-items: center;
-    
-    padding: @padding;
+    padding: 0.5em;
     margin-bottom: 15px;
     height: 250px;
     width: 98%;

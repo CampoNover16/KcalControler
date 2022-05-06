@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet/less" type="text/css" href="style.less" />
     <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+    <script src="js/webcolor.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/dqr6vcs.css">
     <title>KcalControler - Home</title>
 </head>
@@ -34,8 +35,8 @@
             </ul>
         </nav>
         <div class="empty_nav">
-            <button onclick="bodycolorchange()">color change</button>
-            <button onclick="bodycolorreset()">color reset</button>
+            <button onclick="switchTheme('light')"><img src="images/sun.png" alt="moon_image" height="16px" width="16px"></button>
+            <button onclick="switchTheme('dark')"><img src="images/moon.png" alt="moon_image" height="16px" width="16px"></button>
         </div>
     </div>
     <div class="flex_main">
@@ -103,6 +104,5 @@
         </footer>
         <div class="empty_footer"></div>
     </div>
-    <script src="js/script.js"></script>
 </body>
 </html>
