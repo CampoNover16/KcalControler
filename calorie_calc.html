@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
     <script src="js/webcolor.js"></script>
     <script src="js/last_modify.js"></script>
+    <script src="js/calorie-calc.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/dqr6vcs.css">
     <title>KcalControler - Calculator</title>
 </head>
@@ -71,39 +72,42 @@
                                     <p>
                                         <label for="acitivity_1">
                                             <input type="radio" name="activity" value="1.2" id="acitivity_1">
-                                            - No physical activity
+                                            <span>- No physical activity</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_2">
                                             <input type="radio" name="activity" value="1.4" id="acitivity_2">
-                                            - low physical activity (office worker, who physical activity is only related to house chores)
+                                            <span>- low physical activity (office worker, who physical activity is only related to house chores)</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_3">
                                             <input type="radio" name="activity" value="1.6" id="acitivity_3">
-                                            - medium physical activity (office worker, who is training 2-3 times in week for at least one hour)
+                                            <span>- medium physical activity (office worker, who is training 2-3 times in week for at least one hour)</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_4">
                                             <input type="radio" name="activity" value="1.8" id="acitivity_4">
-                                            - high physical activity (office worker, who is training 3-4 times in week for at least one hour)
+                                            <span>- high physical activity (office worker, who is training 3-4 times in week for at least one hour)</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_5">
                                             <input type="radio" name="activity" value="2.0" id="acitivity_5">
-                                            - very high physical activity (professional athlete, who is trening minimum 6 hours in week or a physically working person)
+                                            <span>- very high physical activity (professional athlete, who is trening minimum 6 hours in week or a physically working person)</span>
                                         </label>
                                     </p>
                                 </p>
                                 <p>
-                                    <button type="submit" class="form_button" value="Submit">Submit</button>
+                                    <button type="submit" class="form_button" value="Submit" onclick="CPM(); return false">Submit</button>
                                     <button type="reset" class="form_button" value="Reset">Reset</button>
                                 </p>
                             </label>
+                        </p>
+                        <p>
+                            <div id="kcal_results"></div>
                         </p>
                     </fieldset>
                 </form>
