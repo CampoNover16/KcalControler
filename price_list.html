@@ -45,13 +45,14 @@
         <div class="main">
             <div class="p_box">
                 <h1>Price list</h1>
+                <form>
                     <p>
                         <h2>What are you trying to achieve?</h2>
                         <div class="achieve_list_container">
                             <ul>
-                                <li>Gain muscles <input type="radio" name="achieve_option" value="achieve_option_1"></li>
-                                <li>Lose weight <input type="radio" name="achieve_option" value="achieve_option_2"></li>
-                                <li>Keep actual weight <input type="radio" name="achieve_option" value="achieve_option_3"></li>
+                                <li>Gain muscles <input type="radio" name="achieve_option" value="achieve_option_1" required></li>
+                                <li>Lose weight <input type="radio" name="achieve_option" value="achieve_option_2" required></li>
+                                <li>Keep actual weight <input type="radio" name="achieve_option" value="achieve_option_3" required></li>
                             </ul>
                         </div>
                     </p>
@@ -64,32 +65,33 @@
                         </tr>
                         <tr>
                             <td>one month</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_1">25 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_2">20 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_3">35 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_1" required>25 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_2" required>20 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_3" required>35 $</td>
                         </tr>
                         <tr>
                             <td>three months</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_4">60 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_5">50 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_6">80 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_4" required>60 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_5" required>50 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_6" required>80 $</td>
                         </tr>
                         <tr>
                             <td>six months</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_7">110 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_8">90 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_9">150 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_7" required>110 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_8" required>90 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_9" required>150 $</td>
                         </tr>
                         <tr>
                             <td>twelve months</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_10">200 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_11">165 $</td>
-                            <td><input type="radio" name="plan_choice" value="plan_choice_12">280 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_10" required>200 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_11" required>165 $</td>
+                            <td><input type="radio" name="plan_choice" value="plan_choice_12" required>280 $</td>
                         </tr>
-                </table>
-                <div class="button_container">
-                    <button class="form_button price_button">Save your choice and proceed to next step</button>
-                </div>
+                    </table>
+                    <div class="button_container">
+                        <button type="submit" class="form_button price_button">Save your choice and proceed to next step</button>
+                    </div>
+                </form>
             </div>
             <div class="p_box">
                 <h2>How it works?</h2>

@@ -50,52 +50,52 @@
                         <legend>Calorie calculator</legend>
                         <p>
                             <label for="sex_1">Male </label>
-                            <input type="radio" name="sex" value="M" id="sex_1">
+                            <input type="radio" name="sex" value="M" id="sex_1" required>
                             <label for="sex_2">Female </label>
-                            <input type="radio" name="sex" value="F" id="sex_2">
+                            <input type="radio" name="sex" value="F" id="sex_2" required>
                         </p>
                         <p>
                             <label for="age">Age: </label>
-                            <input type="number" name="age" id="age" min="0">
+                            <input type="number" name="age" id="age" min="0" required>
                         </p>
                         <p>
                             <label for="weight">Weight: </label>
-                            <input type="number" name="weight" id="weight" min="0" placeholder="in kg">
+                            <input type="number" name="weight" id="weight" min="0" placeholder="in kg" required>
                         </p>
                         <p>
                             <label for="height">Height: </label>
-                            <input type="number" name="height" id="height" min="0" placeholder="in cm">
+                            <input type="number" name="height" id="height" min="0" placeholder="in cm" required>
                         </p>
                         <p>
                             <label for="activity">Activity:
                                 <p>
                                     <p>
                                         <label for="acitivity_1">
-                                            <input type="radio" name="activity" value="1.2" id="acitivity_1">
+                                            <input type="radio" name="activity" value="1.2" id="acitivity_1" required>
                                             <span>- No physical activity</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_2">
-                                            <input type="radio" name="activity" value="1.4" id="acitivity_2">
+                                            <input type="radio" name="activity" value="1.4" id="acitivity_2" required>
                                             <span>- low physical activity (office worker, who physical activity is only related to house chores)</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_3">
-                                            <input type="radio" name="activity" value="1.6" id="acitivity_3">
+                                            <input type="radio" name="activity" value="1.6" id="acitivity_3" required>
                                             <span>- medium physical activity (office worker, who is training 2-3 times in week for at least one hour)</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_4">
-                                            <input type="radio" name="activity" value="1.8" id="acitivity_4">
+                                            <input type="radio" name="activity" value="1.8" id="acitivity_4" required>
                                             <span>- high physical activity (office worker, who is training 3-4 times in week for at least one hour)</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label for="acitivity_5">
-                                            <input type="radio" name="activity" value="2.0" id="acitivity_5">
+                                            <input type="radio" name="activity" value="2.0" id="acitivity_5" required>
                                             <span>- very high physical activity (professional athlete, who is trening minimum 6 hours in week or a physically working person)</span>
                                         </label>
                                     </p>
@@ -111,6 +111,25 @@
                         </p>
                     </fieldset>
                 </form>
+            </div>
+            <div class="p_box">
+                <h2>How it is calculated?</h2>
+                <p>
+                    It's calculated based on Harris-Benedict pattern.
+                    <ul>
+                        <li>BMR for men: 66.5 + (13.75 * weight in kg) + (5.003 * height in cm) - (6.75 * age)</li>
+                        <li>BMR for women: 655.1 + (9.563 * weight in kg) + (1.85 * height in cm) - (4.676 * age)</li>
+                    </ul>
+                </p>
+                <p>
+                    And after that we need to determine the Harris-Benedict equation. To achieve that all you 
+                    need to do is multiply your BMR by the appropriate activity factor, which is included in higher form and it's called PAL <i>(physical activity level)</i>. 
+                    From first option that said "No physical activity" and that is factor equal 1.2 and reach up to 2.0 in last activity <i>(next activity 
+                    factor is 0.2 higher than previous one).</i> After that you have in result your TDEE <i>(total daily energy expenditure)</i>. 
+                </p>
+                <p>
+                    If you want to lose weight from TDEE substract some calories <i>(recommended is reasonable number of 500 kcal/day)</i> will let you lose weight gradually and steadily.
+                </p> 
             </div>
         </div>
         <div class="empty_main"></div>
