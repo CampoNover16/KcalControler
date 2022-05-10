@@ -49,7 +49,7 @@ p{
 }
 .empty_nav{
     grid-area: empty_nav;
-    width: 25%;
+    width: 17%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@ button{
 nav{
     grid-area: nav;
     background-color: var(--secondary_color);
-    width: 50%;
+    width: 66%;
     & > a > img{
         padding: 1em;
         float: left;
@@ -130,12 +130,12 @@ nav{
 }
 .main {
     grid-area: main;
-    width: 50%;
+    width: 66%;
     padding: 0.5em;
 }
 .empty_main{
     grid-area: empty_main;
-    width: 25%;
+    width: 17%;
 }
 .flex_footer{
     display: flex;
@@ -143,7 +143,7 @@ nav{
 }
 footer{
     grid-area: footer;
-    width: 50%;
+    width: 66%;
     padding: 0.5em;
     background-color: var(--secondary_color);
     & > span{
@@ -152,7 +152,7 @@ footer{
 }
 .empty_footer{
     grid-area: empty_footer;
-    width: 25%;
+    width: 17%;
 }
 form{
     margin-left: 5%;
@@ -192,9 +192,10 @@ hr{
 }
 .p_box{
     margin: 0 auto;
-    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 83%;
     background-color: var(--secondary_color);
-    margin-top: 15px;
     padding: 1em;
     text-align: justify;
 }
@@ -202,7 +203,9 @@ hr{
 /* calorie_calc.html */
 .form_place{
     margin: 0 auto;
-    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 60%;
     background-color: var(--secondary_color);
 }
 /* end of calorie_calc.html*/
@@ -222,6 +225,13 @@ hr{
     align-items: center;
     &:hover{
         background-color: var(--tertiary_color);
+    }
+}
+#contact_form{
+    textarea{
+        margin: 0 auto;
+        width: 75%;
+        height: 175px;
     }
 }
 /* end of contact.html*/
@@ -358,3 +368,123 @@ hr{
 }
 /* end of articles.html*/
 
+@media screen and (min-width:768px) and (max-width:1024px) {
+/* main styles*/
+.empty_nav{
+    width: 8%;
+}  
+nav{
+    width: 84%;
+}
+.main {
+    width: 84%;
+}
+.empty_main{
+    width: 8%;
+}
+footer{
+    width: 84%;
+}
+.empty_footer{
+    width: 8%;
+} 
+.p_box{
+    width: 90%;
+}
+/* end of main.html*/
+/* calorie_calc.html */
+.form_place{
+    width: 80%;
+}
+/* end of calorie_calc.html*/
+}
+
+@media screen and (max-width:767px) {
+/* main styles*/
+.empty_nav{
+    width: 0%;
+} 
+nav{
+    width: 100%;
+    & > a > img{
+        display: block;
+        margin-left: 42%;
+    } 
+}  
+.main {
+    width: 100%;
+}
+.empty_main{
+    width: 0%;
+}
+footer{
+    width: 100%;
+}
+.empty_footer{
+    width: 0%;
+} 
+.p_box{
+    width: 90%;
+}
+/* end of main.html*/
+/* calorie_calc.html */
+.form_place{
+    width: 90%;
+}
+/* end of calorie_calc.html*/
+/* about.html */
+.about_item{
+    width: 40%;
+}
+/* end of about.html*/
+/* articles.html */
+.article_item{
+    display: inline-block;
+    height: 415px;
+}  
+.left_inner_article_item{
+    width: 100%;
+}
+.right_inner_article_item{
+    width: 100%;
+}
+/* end of articles.html*/
+/* diets.html */
+.diet_item{
+    width: 35%;
+}  
+/* end of diets.html*/
+/* price_list.html */
+.price_step_item{
+    width: 40%;
+}
+.price_step_item_two{
+    height: 150px;
+    width: 40%;
+}
+.achieve_list_container{
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        li{
+            display: flex;
+            width: 25%;
+            margin-right: 12%;
+        }
+    }  
+}
+/* end of price_list.html*/
+/* contact.html */
+#contact_form{
+    label{
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        margin: 0 auto;
+        width:50%;
+    }
+}
+/* end of contact.html*/
+}
