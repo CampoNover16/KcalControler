@@ -60,6 +60,21 @@ img{
 .colorchange_btn > img{
     filter: brightness(0);
 }
+.colorchange_btn{
+    border: none;
+    border-radius: 15px;
+    margin: 0.3em;
+    box-shadow: 0 0 0.5em black;
+    &:hover,
+    &:focus{
+        animation: pulse 1s;
+        box-shadow: 0 0 0 0.8em transparent;
+    }
+    @keyframes pulse{
+        0% {box-shadow: 0 0 0 0 white;}
+    }
+}
+
 button{
     color: var(--text_color);
 }
@@ -67,8 +82,9 @@ nav{
     grid-area: nav;
     background-color: var(--secondary_color);
     width: 50%;
-    & > img{
+    & > a > img{
         padding: 1em;
+        float: left;
     }
     ul{
         float: right;
@@ -174,21 +190,20 @@ hr{
     height: 2px;
     background-image: linear-gradient(to right, transparent, #CCC, transparent);  
 }
+.p_box{
+    margin: 0 auto;
+    width: 75%;
+    background-color: var(--secondary_color);
+    margin-top: 15px;
+    padding: 1em;
+    text-align: justify;
+}
 /* end of main.html*/
 /* calorie_calc.html */
 .form_place{
     margin: 0 auto;
     width: 45%;
     background-color: var(--secondary_color);
-}
-.p_box{
-    margin: 0 auto;
-    width: 75%;
-    background-color: var(--secondary_color);
-    padding: 1em;
-    margin-bottom: 0.5em;
-    margin-top:0.5em;
-    text-align: justify;
 }
 /* end of calorie_calc.html*/
 /* contact.html */
@@ -247,7 +262,8 @@ hr{
     flex-wrap: wrap;
 }
 .price_step_item{
-    padding: 0.6em;
+    padding: 0.5em;
+    margin: 0.1em;
     height: 200px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
@@ -302,8 +318,9 @@ hr{
 /* end of about.html*/
 /* diets.html */
 .diet_item{
-    padding: 0.5em;
-    height: 190px;
+    margin: 5px;
+    padding: 1em;
+    height: 200px;
     width: 20%;
     box-shadow: 0 0 0.5em black;
     text-align: center;
@@ -324,7 +341,7 @@ hr{
     display: flex;
     align-items: center;
     padding: 0.5em;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     height: 275px;
     width: 98%;
     box-shadow: 0 0 0.5em black;
@@ -340,3 +357,4 @@ hr{
     width: 68%;
 }
 /* end of articles.html*/
+
